@@ -4,26 +4,24 @@
     <meta charset="UTF-8" />
     <title>Movies Application</title>
     <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/bootstrap.min.css" />
 </head>
 <body>
     <div class="container">
         <h1>Hello There!</h1>
         <p>To get started, edit <code>src/index.js</code>.</p>
-        <table>
-          <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Rating</th>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
+        <table id="movies">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Title</th>
+              <th>Rating</th>
+            </tr>
+          </thead>
+          <tbody id="insertMovies"></tbody>
         </table>
     </div>
-
-
+    <br>
     <script src="/main.js"></script>
 </body>
 </html>

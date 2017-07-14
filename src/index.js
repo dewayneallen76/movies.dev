@@ -4,6 +4,7 @@
 import $ from 'jquery';
 import getMovies from './getMovies';
 
+
 /**
  * require style imports
  */
@@ -24,7 +25,13 @@ getMovies().then((movies) => {
 
 
 getMovies().then((movies) => {
+  var content = '';
   movies.forEach((movie) => {
-    console.log(movie.title);
+    content += '<tr>';
+    content += '<td>' + movie.id + '</td>';
+    content += '<td>' + movie.title + '</td>';
+    content += '<td>' + movie.rating + '</td>';
+    content += '</tr>';
   });
+  $('#insertMovies').append(content);
 })

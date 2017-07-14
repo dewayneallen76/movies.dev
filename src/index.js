@@ -2,7 +2,6 @@
  * es6 modules and imports
  */
 import $ from 'jquery';
-
 import getMovies from './getMovies';
 
 /**
@@ -22,3 +21,10 @@ getMovies().then((movies) => {
   alert('Oh no! Something went wrong.\nCheck the console for details.')
   console.log(error);
 });
+
+
+getMovies().then((movies) => {
+  movies.forEach((movie) => {
+    console.log(movie.title);
+  });
+})

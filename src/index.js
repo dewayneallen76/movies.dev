@@ -1,14 +1,17 @@
-import $ from "jquery";
 /**
  * es6 modules and imports
  */
-import sayHello from './hello';
-sayHello('World');
+import $ from 'jquery';
+
+import getMovies from './getMovies';
 
 /**
  * require style imports
  */
-const getMovies = require('./getMovies.js');
+// var $ = require('jQuery');
+
+// const getMovies = require('./getMovies.js');
+//
 
 getMovies().then((movies) => {
   console.log('Here are all the movies:');

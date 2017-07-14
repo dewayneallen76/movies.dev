@@ -1,3 +1,4 @@
+import $ from "jquery";
 /**
  * es6 modules and imports
  */

@@ -39,6 +39,16 @@
       "title": "Tommy Boy",
       "rating": "5",
       "id": 8
+    },
+    {
+      "title": "The Jungle Book",
+      "rating": "5",
+      "id": 9
+    },
+    {
+      "title": "Spider Man",
+      "rating": "4",
+      "id": 10
     }
   ]
 }

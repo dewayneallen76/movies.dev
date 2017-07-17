@@ -44,4 +44,4 @@ $('#add').click(function(e) {
   var content = 'Loading ...';
   $('#insertMovies').html(content);
   displayMovies();
-})
+});

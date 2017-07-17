@@ -23,9 +23,10 @@ getMovies().then((movies) => {
   console.log(error);
 });
 
+var content = 'Loading ...';
+$('#insertMovies').html(content);
 
 getMovies().then((movies) => {
-  var content = '';
   movies.forEach((movie) => {
     content += '<tr>';
     content += '<td>' + movie.id + '</td>';
@@ -33,5 +34,5 @@ getMovies().then((movies) => {
     content += '<td>' + movie.rating + '</td>';
     content += '</tr>';
   });
-  $('#insertMovies').append(content);
+  $('#insertMovies').html(content);
 })

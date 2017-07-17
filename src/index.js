@@ -40,7 +40,7 @@ function displayMovies() {
   })
 }
 
-$('#add').click(function() {
+$('#add').submit(function(e) {
   var content = 'Loading ...';
   $('#insertMovies').html(content);
   displayMovies();

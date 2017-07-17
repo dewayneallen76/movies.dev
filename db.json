@@ -19,6 +19,26 @@
       "title": "The Departed",
       "rating": "5",
       "id": 4
+    },
+    {
+      "title": "Star Trek",
+      "rating": "3",
+      "id": 5
+    },
+    {
+      "title": "Westworld",
+      "rating": "5",
+      "id": 6
+    },
+    {
+      "title": "Happy Gilmore",
+      "rating": "5",
+      "id": 7
+    },
+    {
+      "title": "Tommy Boy",
+      "rating": "5",
+      "id": 8
     }
   ]
 }

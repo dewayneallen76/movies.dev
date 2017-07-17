@@ -25,14 +25,23 @@ getMovies().then((movies) => {
 
 var content = 'Loading ...';
 $('#insertMovies').html(content);
+displayMovies();
 
-getMovies().then((movies) => {
-  movies.forEach((movie) => {
-    content += '<tr>';
-    content += '<td>' + movie.id + '</td>';
-    content += '<td>' + movie.title + '</td>';
-    content += '<td>' + movie.rating + '</td>';
-    content += '</tr>';
-  });
+function displayMovies() {
+  getMovies().then((movies) => {
+    movies.forEach((movie) => {
+      content += '<tr>';
+      content += '<td>' + movie.id + '</td>';
+      content += '<td>' + movie.title + '</td>';
+      content += '<td>' + movie.rating + '</td>';
+      content += '</tr>';
+    });
+    $('#insertMovies').html(content);
+  })
+}
+
+$('#add').click(function() {
+  var content = 'Loading ...';
   $('#insertMovies').html(content);
+  displayMovies();
 })

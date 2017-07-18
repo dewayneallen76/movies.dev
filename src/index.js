@@ -12,6 +12,11 @@ import getMovies from './getMovies';
 
 // const getMovies = require('./getMovies.js');
 //
+const apiBase = 'http://localhost:3000/movies';
+
+$.ajax(apiBase)
+    .done(data => console.log(data))
+    .fail(error => console.log(error));
 
 getMovies().then((movies) => {
   console.log('Here are all the movies:');
@@ -34,6 +39,7 @@ function displayMovies() {
       content += '<td>' + movie.id + '</td>';
       content += '<td>' + movie.title + '</td>';
       content += '<td>' + movie.rating + '</td>';
+      content += '<button class="btn" id="delete">Delete</button>';
       content += '</tr>';
     });
     $('#insertMovies').html(content);
@@ -41,7 +47,11 @@ function displayMovies() {
 }
 
 $('#add').click(function(e) {
-  var content = 'Loading ...';
+  $.post('/api/movies', {
+    title : $("#title").val(),
+    rating : $("#rating").val()
+  }),
+  content = 'Loading ...';
   $('#insertMovies').html(content);
   displayMovies();
 });

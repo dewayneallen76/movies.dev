@@ -12,8 +12,10 @@ import getMovies from './getMovies';
 
 // const getMovies = require('./getMovies.js');
 //
+// constant for json file containing the movies.
 const apiBase = 'http://localhost:3000/movies';
 
+// ajax request to get the movies, and console log the data
 $.ajax(apiBase)
     .done(data => console.log(data))
     .fail(error => console.log(error));
@@ -32,6 +34,8 @@ var content = 'Loading ...';
 $('#insertMovies').html(content);
 displayMovies();
 
+addMovie();
+
 function displayMovies() {
   getMovies().then((movies) => {
     movies.forEach((movie) => {
@@ -47,7 +51,7 @@ function displayMovies() {
 
 function addMovie() {
   $('#add').click(function(e) {
-    $.post('/api/movies', {
+    $.post(apiBase, {
       title : $("#title").val(),
       rating : $("#rating").val()
     }),

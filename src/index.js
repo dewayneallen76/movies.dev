@@ -36,22 +36,23 @@ function displayMovies() {
   getMovies().then((movies) => {
     movies.forEach((movie) => {
       content += '<tr>';
-      content += '<td>' + movie.id + '</td>';
       content += '<td>' + movie.title + '</td>';
       content += '<td>' + movie.rating + '</td>';
-      content += '<button class="btn" id="delete">Delete</button>';
+      content += '<td><button id="delete">Delete</button></td>';
       content += '</tr>';
     });
     $('#insertMovies').html(content);
   })
 }
 
-$('#add').click(function(e) {
-  $.post('/api/movies', {
-    title : $("#title").val(),
-    rating : $("#rating").val()
-  }),
-  content = 'Loading ...';
-  $('#insertMovies').html(content);
-  displayMovies();
-});
+function addMovie() {
+  $('#add').click(function(e) {
+    $.post('/api/movies', {
+      title : $("#title").val(),
+      rating : $("#rating").val()
+    }),
+    content = 'Loading ...';
+    $('#insertMovies').html(content);
+    displayMovies();
+  });
+}

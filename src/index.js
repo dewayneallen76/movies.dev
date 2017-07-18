@@ -5,6 +5,7 @@ import $ from 'jquery';
 import getMovies from './getMovies';
 
 
+
 /**
  * require style imports
  */
@@ -40,9 +41,10 @@ function displayMovies() {
   getMovies().then((movies) => {
     movies.forEach((movie) => {
       content += '<tr>';
-      content += '<td>' + movie.title + '</td>';
-      content += '<td>' + movie.rating + '</td>';
-      content += '<td><button id="delete">Delete</button></td>';
+      content += '<td id="title">' + movie.title + '</td>';
+      content += '<td id="rating">' + movie.rating + '</td>';
+      content += '<td><button id="edit">Edit Movie</button></td>';
+      content += '<td><button id="delete">Delete Movie</button></td>';
       content += '</tr>';
     });
     $('#insertMovies').html(content);

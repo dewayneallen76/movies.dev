@@ -4,8 +4,6 @@
 import $ from 'jquery';
 import getMovies from './getMovies';
 
-
-
 /**
  * require style imports
  */

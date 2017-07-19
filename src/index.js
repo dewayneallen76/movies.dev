@@ -31,6 +31,7 @@ getMovies().then((movies) => {
 
 
 var content = 'Loading ...';
+
 function loadMovies() {
   $('#insertMovies').html(content);
   displayMovies();
@@ -56,8 +57,9 @@ function displayMovies() {
 function addMovie() {
   $('#add').click(function(e) {
     if($("#title").val() === "") {
+      // displayMovies();
       $(".alert").show();
-    } else  {
+    } else if ($("#title").val() !== "") {
       $.post(apiBase, {
         title : $("#title").val(),
         rating : $("#rating").val()

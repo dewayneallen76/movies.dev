@@ -29,15 +29,17 @@ getMovies().then((movies) => {
   console.log(error);
 });
 
-var content = 'Loading ...';
 
+var content = 'Loading ...';
 function loadMovies() {
   $('#insertMovies').html(content);
   displayMovies();
 }
 
 loadMovies();
-addMovie();
+
+
+
 
 function displayMovies() {
   getMovies().then((movies) => {
@@ -49,9 +51,10 @@ function displayMovies() {
       content += '<td><button id="delete">Delete Movie</button></td>';
       content += '</tr>';
     });
-    loadMovies();
+    $('#insertMovies').html(content);
   })
 }
+
 
 function addMovie() {
   $('#add').click(function(e) {
@@ -64,14 +67,4 @@ function addMovie() {
     displayMovies();
   });
 }
-
-function editMovie() {
-  $('#edit').click(function(e) {
-    $.put(apiBase, {
-      title : $("#title").val(),
-      rating : $("#rating").val()
-    }),
-    content = 'Loading ...';
-    $
-  })
-}
+addMovie();

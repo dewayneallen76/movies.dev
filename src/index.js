@@ -38,17 +38,14 @@ function loadMovies() {
 
 loadMovies();
 
-
-
-
 function displayMovies() {
   getMovies().then((movies) => {
     movies.forEach((movie) => {
       content += '<tr>';
       content += '<td id="title">' + movie.title + '</td>';
       content += '<td id="rating">' + movie.rating + '</td>';
-      content += '<td><button id="edit">Edit Movie</button></td>';
-      content += '<td><button id="delete">Delete Movie</button></td>';
+      content += '<td><input class="btn btn-primary" type="button" value="Edit Movie" id="edit"></td>';
+      content += '<td><input class="btn btn-danger" type="button" value="Delete Movie" id="delete"></td>';
       content += '</tr>';
     });
     $('#insertMovies').html(content);
@@ -68,3 +65,7 @@ function addMovie() {
   });
 }
 addMovie();
+
+$('#edit').click(function() {
+  console.log("button clicked");
+})

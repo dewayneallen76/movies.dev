@@ -64,6 +64,11 @@
       "title": "Chicago",
       "rating": "1",
       "id": 13
+    },
+    {
+      "title": "Terminator",
+      "rating": "5",
+      "id": 14
     }
   ]
 }

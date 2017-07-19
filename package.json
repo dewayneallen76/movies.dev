@@ -26,6 +26,7 @@
     "net": "^1.0.2",
     "node-movie": "^2.0.0",
     "omdb": "^0.8.0",
+    "omdb-client": "^1.0.6",
     "promise-polyfill": "^6.0.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",

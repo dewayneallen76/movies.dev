@@ -4,6 +4,7 @@
 import $ from 'jquery';
 import getMovies from './getMovies';
 
+var omdbApi = require('omdb-client');
 /**
  * require style imports
  */
@@ -60,3 +61,12 @@ function addMovie() {
     displayMovies();
   });
 }
+
+var params = {
+    apikey: 'd98d1187',
+    title: 'Terminator',
+    year: 2012
+}
+omdbApi.get(params, function(err, data) {
+    console.log(data);
+});

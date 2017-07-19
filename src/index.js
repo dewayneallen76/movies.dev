@@ -56,7 +56,7 @@ function displayMovies() {
 function addMovie() {
   $('#add').click(function(e) {
     if($("#title").val() === "") {
-      alert("Title cannot be blank!")
+      $(".alert").show();
     } else  {
       $.post(apiBase, {
         title : $("#title").val(),

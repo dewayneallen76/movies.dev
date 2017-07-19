@@ -55,14 +55,18 @@ function displayMovies() {
 
 function addMovie() {
   $('#add').click(function(e) {
-    $.post(apiBase, {
-      title : $("#title").val(),
-      rating : $("#rating").val()
-    }),
-    content = 'Loading ...';
-    loadMovies();
-    displayMovies();
-  });
+    if($("#title").val() === "") {
+      alert("Title cannot be blank!")
+    } else  {
+      $.post(apiBase, {
+        title : $("#title").val(),
+        rating : $("#rating").val()
+      }),
+      content = 'Loading ...';
+      loadMovies();
+      displayMovies();
+    }
+    });
 }
 addMovie();
 

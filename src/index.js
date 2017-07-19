@@ -45,8 +45,8 @@ function displayMovies() {
       content += '<tr>';
       content += '<td id="title">' + movie.title + '</td>';
       content += '<td id="rating">' + movie.rating + '</td>';
-      content += '<td><input class="btn btn-primary" type="button" value="Edit Movie" id="edit"></td>';
-      content += '<td><input class="btn btn-danger" type="button" value="Delete Movie" id="delete"></td>';
+      content += '<td><input class="btn btn-primary edit" type="button" value="Edit Movie"></td>';
+      content += '<td><input class="btn btn-danger" type="button" value="Delete Movie" class="delete"></td>';
       content += '</tr>';
     });
     $('#insertMovies').html(content);
@@ -72,6 +72,9 @@ function addMovie() {
 }
 addMovie();
 
-$('#edit').click(function() {
-  alert("button clicked");
-})
+// function editMovie() {
+  // console.log("event listener");
+  $("#insertMovies").on("click", ".edit", function() {
+    alert("button clicked");
+  })
+// }

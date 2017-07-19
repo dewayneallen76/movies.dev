@@ -46,7 +46,7 @@ function displayMovies() {
       content += '<td id="title">' + movie.title + '</td>';
       content += '<td id="rating">' + movie.rating + '</td>';
       content += '<td><input class="btn btn-primary edit" type="button" value="Edit Movie"></td>';
-      content += '<td><input class="btn btn-danger" type="button" value="Delete Movie" class="delete"></td>';
+      content += '<td><input class="btn btn-danger delete" type="button" value="Delete Movie" ></td>';
       content += '</tr>';
     });
     $('#insertMovies').html(content);
@@ -56,15 +56,15 @@ function displayMovies() {
 
 function addMovie() {
   $('#add').click(function(e) {
-    if($("#title").val() === "") {
-      // displayMovies();
-      $(".alert").show();
-    } else if ($("#title").val() !== "") {
+    if($('#title').val() === "") {
+      $('.alert').show();
+    } else if ($('#title').val() !== '') {
       $.post(apiBase, {
-        title : $("#title").val(),
-        rating : $("#rating").val()
+        title : $('#title').val(),
+        rating : $('#rating').val()
       }),
       content = 'Loading ...';
+      $('.alert').hide();
       loadMovies();
       displayMovies();
     }
@@ -72,9 +72,12 @@ function addMovie() {
 }
 addMovie();
 
-// function editMovie() {
-  // console.log("event listener");
-  $("#insertMovies").on("click", ".edit", function() {
-    alert("button clicked");
-  })
-// }
+// Click event for edit buttons
+$('#insertMovies').on('click', '.edit', function() {
+  alert('button clicked');
+})
+
+// Click event for delete buttons
+$('#insertMovies').on('click', '.delete', function() {
+  alert('button clicked');
+})

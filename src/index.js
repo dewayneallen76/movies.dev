@@ -67,5 +67,5 @@ function addMovie() {
 addMovie();
 
 $('#edit').click(function() {
-  console.log("button clicked");
+  alert("button clicked");
 })

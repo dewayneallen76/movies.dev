@@ -43,7 +43,7 @@ function displayMovies() {
   getMovies().then((movies) => {
     movies.forEach((movie) => {
       content += '<tr>';
-      content += '<td id="title">' + movie.title + '</td>';
+      content += '<td id="title"><input class="editTitle" value=" + this.value + "hidden>' + movie.title + '</input></td>';
       content += '<td id="rating">' + movie.rating + '</td>';
       content += '<td><input class="btn btn-primary edit" type="button" value="Edit Movie"></td>';
       content += '<td><input class="btn btn-danger delete" type="button" value="Delete Movie" ></td>';
@@ -78,7 +78,7 @@ addMovie();
 
 // Click event for edit buttons
 $('#insertMovies').on('click', '.edit', function() {
-  alert('button clicked');
+  $('.editTitle').show(this);
 })
 
 // Click event for delete buttons

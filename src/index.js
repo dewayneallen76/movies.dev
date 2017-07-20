@@ -65,6 +65,8 @@ function addMovie() {
         title : $('#title').val(),
         rating : $('#rating').val()
       }),
+      $('#title').val("");
+      $('#rating').val("");
       content = 'Loading ...';
       $('.alert').hide();
       loadMovies();

@@ -46,6 +46,7 @@ function displayMovies() {
       content += '<td class="title"><input class="editTitle" value="' + movie.title + '"hidden><span class="movieTitle">' + movie.title + '</span></td>';
       content += '<td class="rating"><input class="editRating" value="' + movie.rating + '"hidden><span class="movieRating">' + movie.rating + '</span></td>';
       content += '<td><input class="btn btn-primary edit" type="button" value="Edit Movie"></td>';
+      content += '<td><input class="btn btn-success saveEdit" type="button" value="Save Edit" style="display:none"></td>';
       content += '<td><input class="btn btn-danger delete" type="button" value="Delete Movie" ></td>';
       content += '</tr>';
     });
@@ -78,8 +79,6 @@ addMovie();
 
 // Click event for edit buttons
 $('#insertMovies').on('click', '.edit', function() {
-
-  $(this).val("Save Edit");
 
   $(this).parent().siblings('.title').children('.movieTitle').hide();
   $(this).parent().siblings('.title').children().first().show();

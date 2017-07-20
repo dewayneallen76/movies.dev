@@ -109,6 +109,11 @@
       "title": "The Santa Clause",
       "rating": "2",
       "id": 22
+    },
+    {
+      "title": "The A Team",
+      "rating": "5",
+      "id": 23
     }
   ]
 }

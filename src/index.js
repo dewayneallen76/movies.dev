@@ -43,8 +43,8 @@ function displayMovies() {
   getMovies().then((movies) => {
     movies.forEach((movie) => {
       content += '<tr>';
-      content += '<td id="title"><input class="editTitle" value="' + movie.title + '"hidden>' + movie.title + '</input></td>';
-      content += '<td id="title"><input class="editRating" value="' + movie.rating + '"hidden>' + movie.rating + '</input></td>';
+      content += '<td class="title"><input class="editTitle" value="' + movie.title + '"hidden><span class="movieTitle">' + movie.title + '</span></td>';
+      content += '<td class="rating"><input class="editRating" value="' + movie.rating + '"hidden><span class="movieRating">' + movie.rating + '</span></td>';
       content += '<td><input class="btn btn-primary edit" type="button" value="Edit Movie"></td>';
       content += '<td><input class="btn btn-danger delete" type="button" value="Delete Movie" ></td>';
       content += '</tr>';
@@ -56,17 +56,17 @@ function displayMovies() {
 
 function addMovie() {
   $('#add').click(function(e) {
-    if($('#title').val() === "") {
+    if($('.title').val() === "") {
       $('.alert').show();
-    } else if($('#rating').val() === ""){
+    } else if($('.rating').val() === ""){
       $('#alertRating').show();
-    }else if ($('#title').val() !== '') {
+    }else if ($('.title').val() !== '') {
       $.post(apiBase, {
-        title : $('#title').val(),
-        rating : $('#rating').val()
+        title : $('.title').val(),
+        rating : $('.rating').val()
       }),
-      $('#title').val("");
-      $('#rating').val("");
+      $('.title').val("");
+      $('.rating').val("");
       content = 'Loading ...';
       $('.alert').hide();
       loadMovies();
@@ -78,9 +78,16 @@ addMovie();
 
 // Click event for edit buttons
 $('#insertMovies').on('click', '.edit', function() {
-  alert('button clicked');
-  $('.editTitle').show();
-  $('.editRating').show();
+
+  $(this).val("Save Edit");
+
+  $(this).parent().siblings('.title').children('.movieTitle').hide();
+  $(this).parent().siblings('.title').children().first().show();
+
+  $(this).parent().siblings('.rating').children('.movieRating').hide();
+  $(this).parent().siblings('.rating').children().first().show();
+
+
 })
 
 // Click event for delete buttons

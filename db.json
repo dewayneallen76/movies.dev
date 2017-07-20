@@ -94,6 +94,16 @@
       "title": "A Bug's Life",
       "rating": "4",
       "id": 19
+    },
+    {
+      "title": "The Dirty Dozen",
+      "rating": "4",
+      "id": 20
+    },
+    {
+      "title": "Wild Hogs",
+      "rating": "3",
+      "id": 21
     }
   ]
 }

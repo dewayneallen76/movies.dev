@@ -58,7 +58,9 @@ function addMovie() {
   $('#add').click(function(e) {
     if($('#title').val() === "") {
       $('.alert').show();
-    } else if ($('#title').val() !== '') {
+    } else if($('#rating').val() === ""){
+      $('#alertRating').show();
+    }else if ($('#title').val() !== '') {
       $.post(apiBase, {
         title : $('#title').val(),
         rating : $('#rating').val()

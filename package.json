@@ -36,6 +36,7 @@
     "tls": "0.0.1",
     "webpack": "^3.0.0",
     "webpack-dev-server": "^2.5.0",
-    "whatwg-fetch": "^2.0.3"
+    "whatwg-fetch": "^2.0.3",
+    "x-editable": "^1.5.1"
   }
 }

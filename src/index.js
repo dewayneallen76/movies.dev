@@ -81,7 +81,7 @@ function addMovie() {
       content = 'Loading ...';
       $('.alert').hide();
       loadMovies();
-      displayMovies();
+      // displayMovies();
     }
     });
 }

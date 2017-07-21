@@ -124,6 +124,26 @@
       "title": "Not Casablanca",
       "rating": "3",
       "id": 25
+    },
+    {
+      "title": "Some Movie",
+      "rating": "5",
+      "id": 26
+    },
+    {
+      "title": "Another Movie",
+      "rating": "5",
+      "id": 27
+    },
+    {
+      "title": "Yet Another Movie",
+      "rating": "1",
+      "id": 28
+    },
+    {
+      "title": "Testing adding another movie",
+      "rating": "5",
+      "id": 29
     }
   ]
 }

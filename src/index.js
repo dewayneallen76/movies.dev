@@ -67,17 +67,17 @@ function displayMovies() {
 
 function addMovie() {
   $('#add').click(function(e) {
-    if($('.title').val() === "") {
-      $('.alert').show();
-    } else if($('.rating').val() === ""){
+    if($('#title').val() === "") {
+      $('#alertTitle').show();
+    } else if($('#rating').val() === ""){
       $('#alertRating').show();
-    }else if ($('.title').val() !== '') {
+    }else if ($('#title').val() !== '') {
       $.post(apiBase, {
-        title : $('.title').val(),
-        rating : $('.rating').val()
+        title : $('#title').val(),
+        rating : $('#rating').val()
       }),
-      $('.title').val("");
-      $('.rating').val("");
+      $('#title').val("");
+      $('#rating').val("");
       content = 'Loading ...';
       $('.alert').hide();
       loadMovies();

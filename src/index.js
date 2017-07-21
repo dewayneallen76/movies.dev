@@ -43,6 +43,8 @@ function displayMovies() {
   getMovies().then((movies) => {
     movies.forEach((movie) => {
       content += '<tr>';
+      // // test for using xeditable
+      // content += '<td><a href="#" id="title">MovieTitle</a>'
       content += '<td class="title"><input class="editTitle" value="' + movie.title + '"hidden><span class="movieTitle">' + movie.title + '</span></td>';
       content += '<td class="rating"><input class="editRating" value="' + movie.rating + '"hidden><span class="movieRating">' + movie.rating + '</span></td>';
       content += '<td><input class="btn btn-primary edit" type="button" value="Edit Movie"></td>';
@@ -53,6 +55,13 @@ function displayMovies() {
     $('#insertMovies').html(content);
   })
 }
+
+// test for x-editable, cannot get it to work
+// $('#title').editable({
+//     type: 'text',
+//     pk: 1,
+//     title: 'Enter username'
+// });
 
 
 function addMovie() {
@@ -80,15 +89,22 @@ addMovie();
 // Click event for edit buttons
 $('#insertMovies').on('click', '.edit', function() {
 
+
   $(this).parent().siblings('.title').children('.movieTitle').hide();
   $(this).parent().siblings('.title').children().first().show();
 
   $(this).parent().siblings('.rating').children('.movieRating').hide();
   $(this).parent().siblings('.rating').children().first().show();
 
+  $(this).parent().siblings().children('.saveEdit').first().attr('style', 'display:block');
+  $(this).first().attr('style', 'display:none');
+  // Trying to hide the edit button when the save button appears
 
 })
 
+$('#insertMovies').on('click', '.saveEdit', function() {
+  alert('button clicked');
+})
 // Click event for delete buttons
 $('#insertMovies').on('click', '.delete', function() {
   alert('button clicked');

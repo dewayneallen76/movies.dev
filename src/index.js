@@ -103,7 +103,13 @@ $('#insertMovies').on('click', '.edit', function() {
 })
 
 $('#insertMovies').on('click', '.saveEdit', function() {
-  alert('button clicked');
+  alert($(this).parent().siblings('.title').children().first().val() + " " + $(this).parent().siblings('.rating').children().first().val());
+  $.post(apiBase, {
+    title : $(this).parent().siblings('.title').children().first().val(),
+    rating : $(this).parent().siblings('.rating').children().first().val()
+  }),
+  $(this).parent().siblings('.title').children().first().val();
+  $(this).parent().siblings('.rating').children().first().val();
 })
 // Click event for delete buttons
 $('#insertMovies').on('click', '.delete', function() {

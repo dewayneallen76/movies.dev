@@ -46,7 +46,7 @@ function displayMovies() {
       // // test for using xeditable
       // content += '<td><a href="#" id="title">MovieTitle</a>'
       content += '<td class="title"><input class="editTitle" value="' + movie.title + '"hidden><span class="movieTitle">' + movie.title + '</span></td>';
-      content += '<td class="rating"><input class="editRating" value="' + movie.rating + '"hidden><span class="movieRating">' + movie.rating + '</span></td>';
+      content += '<td class="rating"><input type="number" min="1" max="5" class="editRating" value="' + movie.rating + '"hidden><span class="movieRating">' + movie.rating + '</span></td>';
       content += '<td><input class="btn btn-primary edit" type="button" value="Edit Movie"></td>';
       content += '<td><input class="btn btn-success saveEdit" type="button" value="Save Edit" style="display:none"></td>';
       content += '<td><input class="btn btn-danger delete" type="button" value="Delete Movie" ></td>';

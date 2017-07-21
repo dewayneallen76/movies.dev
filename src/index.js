@@ -103,18 +103,23 @@ $('#insertMovies').on('click', '.edit', function() {
 
 })
 
+
 $('#insertMovies').on('click', '.saveEdit', function() {
   var editId = $(this).parent().siblings('.id').text();
   var editTitle = $(this).parent().siblings('.title').children().first().val();
   var editRating = $(this).parent().siblings('.rating').children().first().val();
 
   alert(editId + " " + editTitle + " " + editRating);
-    // if (apiBase[i].id == editId) {
-    //   $.post(apiBase, {
-    //     apiBase[i].title = editTitle;
-    //     apiBase[i].rating = editRating;
-    //   })
-    // break;
+
+  getMovies().then((movies) => {
+    for(var i = 0; i < movies.length; i++) {
+      if(movies[i].id == editId) {
+        console.log(movies[i].title);
+      }
+    }
+  })
+
+
 })
 // Click event for delete buttons
 $('#insertMovies').on('click', '.delete', function() {

@@ -45,7 +45,7 @@ function displayMovies() {
       content += '<tr>';
       // // test for using x-editable
       // content += '<td><a href="#" id="title">MovieTitle</a>'
-      content += '<td class="id" style="display:none" value="' + movie.id + '"</td>';
+      content += '<td class="id" style="display:none">' + movie.id + '</td>';
       content += '<td class="title"><input class="editTitle" value="' + movie.title + '"hidden><span class="movieTitle">' + movie.title + '</span></td>';
       content += '<td class="rating"><input type="number" min="1" max="5" class="editRating" value="' + movie.rating + '"hidden><span class="movieRating">' + movie.rating + '</span></td>';
       content += '<td><input class="btn btn-primary edit" type="button" value="Edit Movie"></td>';
@@ -104,9 +104,17 @@ $('#insertMovies').on('click', '.edit', function() {
 })
 
 $('#insertMovies').on('click', '.saveEdit', function() {
-  alert(
-    $(this).parent().siblings('.id').children().first().val() + " " +
-    $(this).parent().siblings('.title').children().first().val() + " " + $(this).parent().siblings('.rating').children().first().val());
+  var editId = $(this).parent().siblings('.id').text();
+  var editTitle = $(this).parent().siblings('.title').children().first().val();
+  var editRating = $(this).parent().siblings('.rating').children().first().val();
+
+  alert(editId + " " + editTitle + " " + editRating);
+    // if (apiBase[i].id == editId) {
+    //   $.post(apiBase, {
+    //     apiBase[i].title = editTitle;
+    //     apiBase[i].rating = editRating;
+    //   })
+    // break;
 })
 // Click event for delete buttons
 $('#insertMovies').on('click', '.delete', function() {

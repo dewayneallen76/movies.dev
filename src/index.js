@@ -43,7 +43,7 @@ function displayMovies() {
   getMovies().then((movies) => {
     movies.forEach((movie) => {
       content += '<tr>';
-      // // test for using xeditable
+      // // test for using x-editable
       // content += '<td><a href="#" id="title">MovieTitle</a>'
       content += '<td class="title"><input class="editTitle" value="' + movie.title + '"hidden><span class="movieTitle">' + movie.title + '</span></td>';
       content += '<td class="rating"><input type="number" min="1" max="5" class="editRating" value="' + movie.rating + '"hidden><span class="movieRating">' + movie.rating + '</span></td>';

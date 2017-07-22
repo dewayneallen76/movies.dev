@@ -24,8 +24,6 @@
             <button class="btn btn-success" type="submit" id="add">Add A Movie</button>
           <!-- </form> -->
         </div>
-        <div class="container">
-        <div id="wait" style="display:none;width:69px;height:89px;border:1px solid black;position:absolute;top:50%;left:50%;padding:2px;"><img src="film.gif" width="64" height="64" /><br>Loading..</div>
         <table class="table table-striped" id="movies">
           <thead>
             <tr>
@@ -35,6 +33,13 @@
           </thead>
           <tbody id="insertMovies"></tbody>
         </table>
+        <!-- Container for loading animation -->
+        <div class="container">
+          <div id="wait">
+            <h3>Loading..</h3>
+            <br>
+            <img class="gif" src="film.gif" width="500" height="300" />
+          </div>
 
         </div>
     </div>

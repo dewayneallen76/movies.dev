@@ -33,7 +33,7 @@ getMovies().then((movies) => {
 var content = 'Loading ...';
 
 function loadMovies() {
-  $('#insertMovies').html(content);
+  $("#wait").css("display", "block");
   displayMovies();
 }
 
@@ -53,6 +53,7 @@ function displayMovies() {
       content += '<td><input class="btn btn-danger delete" type="button" value="Delete Movie" ></td>';
       content += '</tr>';
     });
+    $("#wait").css("display", "none");
     $('#insertMovies').html(content);
   })
 }

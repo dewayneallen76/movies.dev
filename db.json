@@ -144,6 +144,21 @@
       "title": "Testing adding another movie",
       "rating": "5",
       "id": 29
+    },
+    {
+      "title": "adding another movie",
+      "rating": "1",
+      "id": 30
+    },
+    {
+      "title": "another movie",
+      "rating": "1",
+      "id": 31
+    },
+    {
+      "title": "Adding another movie",
+      "rating": "5",
+      "id": 32
     }
   ]
 }

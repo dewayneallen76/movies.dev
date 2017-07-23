@@ -1,7 +1,7 @@
 html, body {
     height: 100%;
     /*background-color: papayawhip;*/
-    background-image: url('theater2.jpg');
+    background-image: url('theater3.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,8 +14,8 @@ html, body {
 }
 
 .box {
-  height: 650px;
-  width: 925px;
+  height: 550px;
+  width: 825px;
   overflow: auto;
   background-color: silver;
   border: 10px solid black;

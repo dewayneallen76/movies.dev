@@ -9,12 +9,19 @@
     <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
-    <div class="container">
+    <div class="container heading">
         <h1 class="text-center">Movie Tracker</h1>
         <p class="text-center">Keep track and rate the movies you've seen</p>
         <div id="alertTitle" class="alert alert-danger" role="alert" hidden>Title cannot be blank!</div>
         <div id="alertRating" class="alert alert-danger" role="alert" hidden>Rating cannot be blank!</div>
-        <div class="container">
+    </div>
+        <div class="container box">
+          <div class="movies">
+            <!-- <div id="wait"> -->
+              <!-- <h3>Loading..</h3> -->
+              <!-- <br> -->
+              <!-- <img class="gif" src="film.gif" width="500" height="300" />
+            </div> -->
           <h2>Add Movie</h2>
           <!-- <form class="form-group"> -->
             <label for="title">Title</label>
@@ -23,7 +30,6 @@
             <input type="number" id="rating" min="1" max="5" name="rating" value="">
             <button class="btn btn-success" type="submit" id="add">Add A Movie</button>
           <!-- </form> -->
-        </div>
         <table class="table table-striped" id="movies">
           <thead>
             <tr>
@@ -34,15 +40,16 @@
           <tbody id="insertMovies"></tbody>
         </table>
         <!-- Container for loading animation -->
-        <div class="container">
-          <div id="wait">
-            <h3>Loading..</h3>
-            <br>
-            <img class="gif" src="film.gif" width="500" height="300" />
-          </div>
-
         </div>
-    </div>
+      </div>
+      <!-- <div class="container">
+        <div id="wait"> -->
+          <!-- <h3>Loading..</h3> -->
+          <!-- <br> -->
+          <!-- <img class="gif" src="film.gif" width="750" height="400" />
+        </div>
+      </div> -->
+
     <br>
     <script src="/main.js"></script>
     <!-- CDN for x-editable -->

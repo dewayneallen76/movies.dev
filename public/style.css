@@ -1,14 +1,31 @@
 html, body {
     height: 100%;
-    background-color: papayawhip;
+    /*background-color: papayawhip;*/
+    background-image: url('theater2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.heading {
+  margin-bottom: 25px;
+  color: white;
+}
+
+.box {
+  height: 400px;
+  width: 750px;
+  overflow: auto;
+  background-color: silver;
 }
 
 #wait {
-  display: none;
-  /*margin: auto;
-  width: 40%;
-  position: absolute;
-  padding: 2px;*/
+  /*display: none;*/
+  /*margin: auto;*/
+  /*width: 40%;*/
+  /*position: absolute;*/
+  /*padding: 2px;*/
 }
 
 .gif {

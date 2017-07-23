@@ -33,7 +33,7 @@ getMovies().then((movies) => {
 var content = 'Loading ...';
 
 function loadMovies() {
-  $('#movies').replaceWith($('#wait'));
+  $('.box').css('background-image', 'url("film.gif")');
   displayMovies();
 }
 // $('#wait').replaceWith($('#movies'));
@@ -54,8 +54,9 @@ function displayMovies() {
       content += '<td><input class="btn btn-danger delete" type="button" value="Delete Movie" ></td>';
       content += '</tr>';
     });
-    // $('#wait').replaceWith($('.movies'));
+    $('#movies').css('display', 'block');
     $('#insertMovies').html(content);
+    $('.box').css('background-image', 'none');
   })
 }
 
@@ -80,10 +81,9 @@ function addMovie() {
       }),
       $('#title').val("");
       $('#rating').val("");
-      content = 'Loading ...';
       $('.alert').hide();
+      $('#movies').css('display', 'none');
       loadMovies();
-      // displayMovies();
     }
     });
 }

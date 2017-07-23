@@ -14,12 +14,11 @@ html, body {
 }
 
 .box {
-  height: 450px;
-  width: 825px;
+  height: 650px;
+  width: 925px;
   overflow: auto;
   background-color: silver;
   border: 10px solid black;
-  /*background-image: url('film.gif');*/
   background-size: 100% 100%;
 }
 

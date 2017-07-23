@@ -33,9 +33,10 @@ getMovies().then((movies) => {
 var content = 'Loading ...';
 
 function loadMovies() {
-  // $('.movies').replaceWith($('#wait'));
+  $('#movies').replaceWith($('#wait'));
   displayMovies();
 }
+// $('#wait').replaceWith($('#movies'));
 
 loadMovies();
 
@@ -53,7 +54,7 @@ function displayMovies() {
       content += '<td><input class="btn btn-danger delete" type="button" value="Delete Movie" ></td>';
       content += '</tr>';
     });
-    $('#wait').replaceWith($('.movies'));
+    // $('#wait').replaceWith($('.movies'));
     $('#insertMovies').html(content);
   })
 }

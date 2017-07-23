@@ -9,15 +9,16 @@ html, body {
 }
 
 .heading {
-  margin-bottom: 25px;
+  margin-bottom: 5px;
   color: white;
 }
 
 .box {
-  height: 400px;
-  width: 750px;
+  height: 450px;
+  width: 825px;
   overflow: auto;
   background-color: silver;
+  border: 10px solid black;
 }
 
 #wait {

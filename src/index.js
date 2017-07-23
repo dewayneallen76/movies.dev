@@ -33,7 +33,7 @@ getMovies().then((movies) => {
 var content = 'Loading ...';
 
 function loadMovies() {
-  $('.box').css('background-image', 'url("film.gif")');
+  $('.box').css('background-image', 'url("film2.gif")');
   displayMovies();
 }
 // $('#wait').replaceWith($('#movies'));

@@ -12,11 +12,11 @@
     <div class="container heading">
         <h1 class="text-center">Movie Tracker</h1>
         <p class="text-center">Keep track and rate the movies you've seen</p>
-        <div id="alertTitle" class="alert alert-danger" role="alert" hidden>Title cannot be blank!</div>
-        <div id="alertRating" class="alert alert-danger" role="alert" hidden>Rating cannot be blank!</div>
     </div>
         <div class="container box">
           <div id="movies">
+            <div id="alertTitle" class="alert alert-danger" role="alert" hidden>Title cannot be blank!</div>
+            <div id="alertRating" class="alert alert-danger" role="alert" hidden>Rating cannot be blank!</div>
             <!-- <div id="wait"> -->
               <!-- <h3>Loading..</h3> -->
               <!-- <br> -->
@@ -30,7 +30,7 @@
             <input type="number" id="rating" min="1" max="5" name="rating" value="">
             <button class="btn btn-success" type="submit" id="add">Add A Movie</button>
           <!-- </form> -->
-        <table class="table table-striped" id="movies">
+        <table class="table table-striped">
           <thead>
             <tr>
               <th>Title</th>
@@ -42,13 +42,13 @@
         <!-- Container for loading animation -->
         </div>
       </div>
-      <div class="container">
-        <div id="wait">
+      <!-- <div class="container">
+        <div id="wait"> -->
           <!-- <h3>Loading..</h3> -->
           <!-- <br> -->
-          <img class="gif" src="film.gif" width="750" height="400" />
+          <!-- <img class="gif" src="film.gif" width="750" height="400" />
         </div>
-      </div>
+      </div> -->
 
     <br>
     <script src="/main.js"></script>

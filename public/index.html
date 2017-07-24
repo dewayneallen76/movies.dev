@@ -12,29 +12,22 @@
   <div id="fullpage">
     <div class="section active curtains"></div> <!--Div for curtains for fullpage.js, setup in css -->
     <div class="main section">
-    <div class="container heading">
+      <div class="container heading">
         <h1 class="text-center">Movie Tracker</h1>
         <p class="text-center">Keep track and rate the movies you've seen</p>
-    </div>
-        <div class="container box">
-          <div id="movies">
-            <div id="alertTitle" class="alert alert-danger" role="alert" hidden>Title cannot be blank!</div>
-            <div id="alertRating" class="alert alert-danger" role="alert" hidden>Rating cannot be blank!</div>
-            <!-- <div id="wait"> -->
-              <!-- <h3>Loading..</h3> -->
-              <!-- <br> -->
-              <!-- <img class="gif" src="film.gif" width="500" height="300" />
-            </div> -->
-          <h4>Add Movie <a href="#"><span class="addMovie">+</span></a></h4>
-          <!-- <form class="form-group"> -->
-          <div class="showMovieInput">
-            <label for="title">Title</label>
-            <input type="text" id="title" name="title" placeholder="Movie Title" value="">
-            <label>Rating (1 Avoid It! -  5 Go see it!)</label>
-            <input type="number" id="rating" min="1" max="5" name="rating" value="">
-            <button class="btn btn-success" type="submit" id="add">Add A Movie</button>
-          </div>
-          <!-- </form> -->
+      </div> <!--.container heading close -->
+      <div class="container box">
+        <div id="movies">
+          <div id="alertTitle" class="alert alert-danger" role="alert" hidden>Title cannot be blank!</div>
+          <div id="alertRating" class="alert alert-danger" role="alert" hidden>Rating cannot be blank!</div>
+        <h4>Add Movie <a href="#"><span class="addMovie">+</span></a></h4>
+        <div class="showMovieInput">
+          <label for="title">Title</label>
+          <input type="text" id="title" name="title" placeholder="Movie Title" value="">
+          <label>Rating (1 Avoid It! -  5 Go see it!)</label>
+          <input type="number" id="rating" min="1" max="5" name="rating" value="">
+          <button class="btn btn-success" type="submit" id="add">Add A Movie</button>
+        </div> <!-- .showMovieInput close -->
         <table class="table table-striped">
           <thead>
             <tr>
@@ -47,7 +40,7 @@
         </div>
       </div>
     </div> <!--Closes .main section-->
-    </div> <!--Closes .fullpage div -->
+  </div> <!--Closes .fullpage div -->
 
     <br>
     <script src="/main.js"></script>

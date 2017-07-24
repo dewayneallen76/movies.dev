@@ -30,7 +30,7 @@ html, body {
 .box {
   height: 550px;
   width: 825px;
-  overflow: auto;
+  overflow: scroll;
   background-color: silver;
   border: 10px solid black;
   background-size: 100% 100%;

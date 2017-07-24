@@ -22,7 +22,9 @@ html, body {
   background-size: 100% 100%;
 }
 
-
+.showMovieInput {
+  display: none;
+}
 #movies {
   display: none;
 }

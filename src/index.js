@@ -35,7 +35,7 @@ getMovies().then((movies) => {
 fullpage.js
 */
 $('#fullpage').fullpage( {
-  normalScrollElements: '.box',
+  normalScrollElements: '.box'
 });
 
 $(document).on('click', '#scrollUp', function(){

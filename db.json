@@ -164,6 +164,11 @@
       "title": "Another Movie",
       "rating": "5",
       "id": 33
+    },
+    {
+      "title": "Curtain works with fullpage",
+      "rating": "4",
+      "id": 34
     }
   ]
 }

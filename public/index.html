@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
+  <div id="fullpage">
+    <div class="section active curtains"></div> <!--Div for curtains for fullpage.js, setup in css -->
+    <div class="main section">
     <div class="container heading">
         <h1 class="text-center">Movie Tracker</h1>
         <p class="text-center">Keep track and rate the movies you've seen</p>
@@ -41,16 +44,10 @@
           </thead>
           <tbody id="insertMovies"></tbody>
         </table>
-        <!-- Container for loading animation -->
         </div>
       </div>
-      <!-- <div class="container">
-        <div id="wait"> -->
-          <!-- <h3>Loading..</h3> -->
-          <!-- <br> -->
-          <!-- <img class="gif" src="film.gif" width="750" height="400" />
-        </div>
-      </div> -->
+    </div> <!--Closes .main section-->
+    </div> <!--Closes .fullpage div -->
 
     <br>
     <script src="/main.js"></script>

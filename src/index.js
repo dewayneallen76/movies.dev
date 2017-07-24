@@ -6,6 +6,8 @@ import getMovies from './getMovies';
 import fullpage from 'fullpage.js'
 
 var content = "";
+// constant for json file containing the movies.
+const apiBase = 'http://localhost:3000/movies';
 /**
  * require style imports
  */
@@ -13,8 +15,6 @@ var content = "";
 
 // const getMovies = require('./getMovies.js');
 //
-// constant for json file containing the movies.
-const apiBase = 'http://localhost:3000/movies';
 
 // ajax request to get the movies, and console log the data
 $.ajax(apiBase)
@@ -31,21 +31,16 @@ getMovies().then((movies) => {
   console.log(error);
 });
 
-// $(document).ready(function() {
-  $('#fullpage').fullpage();
-  $.fn.fullpage.setLockAnchors(true);
-  $.fn.fullpage({
-        afterRender: function(){
-            initialization();
-        }
-    });
-// })
+/*
+fullpage.js
+*/
+$('#fullpage').fullpage();
+
 
 function loadMovies() {
   $('.box').css('background-image', 'url("film2.gif")');
   displayMovies();
 }
-// $('#wait').replaceWith($('#movies'));
 
 loadMovies();
 
@@ -53,8 +48,6 @@ function displayMovies() {
   getMovies().then((movies) => {
     movies.forEach((movie) => {
       content += '<tr>';
-      // // test for using x-editable
-      // content += '<td><a href="#" id="title">MovieTitle</a>'
       content += '<td class="id" style="display:none">' + movie.id + '</td>';
       content += '<td class="title"><input class="editTitle" value="' + movie.title + '"hidden><span class="movieTitle">' + movie.title + '</span></td>';
       content += '<td class="rating"><input type="number" min="1" max="5" class="editRating" value="' + movie.rating + '"hidden><span class="movieRating">' + movie.rating + '</span></td>';
@@ -68,13 +61,6 @@ function displayMovies() {
     $('.box').css('background-image', 'none');
   })
 }
-
-// test for x-editable, cannot get it to work
-// $('#title').editable({
-//     type: 'text',
-//     pk: 1,
-//     title: 'Enter username'
-// });
 
 $('.addMovie').click(function() {
   $('.showMovieInput').slideToggle();
@@ -113,7 +99,6 @@ $('#insertMovies').on('click', '.edit', function() {
 
   $(this).parent().siblings().children('.saveEdit').first().attr('style', 'display:block');
   $(this).first().attr('style', 'display:none');
-  // Trying to hide the edit button when the save button appears
 
 })
 

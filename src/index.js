@@ -34,8 +34,13 @@ getMovies().then((movies) => {
 /*
 fullpage.js
 */
-$('#fullpage').fullpage();
+$('#fullpage').fullpage( {
+  normalScrollElements: '.box',
+});
 
+$(document).on('click', '#scrollUp', function(){
+  $.fn.fullpage.moveSectionDown();
+});
 
 function loadMovies() {
   $('.box').css('background-image', 'url("film2.gif")');

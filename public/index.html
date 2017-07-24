@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <title>Movies Application</title>
     <link rel="stylesheet" href="/bootstrap.min.css" />
-    <!-- CDN for x-editable -->
-    <!-- <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap-editable/css/bootstrap-editable.css" rel="stylesheet"/> -->
     <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
@@ -14,7 +12,7 @@
       <div class="openingText">
         <h1>Welcome to Movie Tracker</h1>
         <p>Scroll down or click below<p>
-          <button id="scrollUp">Click Here</button>
+          <button class="btn btn-success" id="scrollUp">Click Here</button>
       </div>
     </div> <!--Div for curtains for fullpage.js, setup in css -->
     <div class="main section fp-noscroll">
@@ -26,31 +24,29 @@
         <div id="movies">
           <div id="alertTitle" class="alert alert-danger" role="alert" hidden>Title cannot be blank!</div>
           <div id="alertRating" class="alert alert-danger" role="alert" hidden>Rating cannot be blank!</div>
-        <h4>Add Movie <a href="#"><span class="addMovie">+</span></a></h4>
-        <div class="showMovieInput">
-          <label for="title">Title</label>
-          <input type="text" id="title" name="title" placeholder="Movie Title" value="">
-          <label>Rating (1 Avoid It! -  5 Go see it!)</label>
-          <input type="number" id="rating" min="1" max="5" name="rating" value="">
-          <button class="btn btn-success" type="submit" id="add">Add A Movie</button>
-        </div> <!-- .showMovieInput close -->
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>Title</th>
-              <th>My Rating</th>
-            </tr>
-          </thead>
-          <tbody id="insertMovies"></tbody>
-        </table>
-        </div>
-      </div>
-    </div> <!--Closes .main section-->
+          <h4>Add Movie <a href="#"><span class="addMovie">+</span></a></h4>
+          <div class="showMovieInput">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" placeholder="Movie Title" value="">
+            <label>Rating (1 Avoid It! -  5 Go see it!)</label>
+            <input type="number" id="rating" min="1" max="5" name="rating" value="">
+            <button class="btn btn-success" type="submit" id="add">Add A Movie</button>
+          </div> <!-- .showMovieInput close -->
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>My Rating</th>
+                </tr>
+              </thead>
+              <tbody id="insertMovies"></tbody>
+            </table>
+          </div> <!--Closes .movies -->
+      </div> <!--Closes .box -->
+    </div> <!--Closes .main section -->
   </div> <!--Closes .fullpage div -->
 
-    <br>
-    <script src="/main.js"></script>
-    <!-- CDN for x-editable -->
-    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap-editable/js/bootstrap-editable.min.js"></script> -->
+  <script src="/main.js"></script>
+
 </body>
 </html>

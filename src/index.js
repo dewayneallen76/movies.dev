@@ -67,6 +67,9 @@ function displayMovies() {
 //     title: 'Enter username'
 // });
 
+$('.addMovie').click(function() {
+  $('.showMovieInput').slideToggle();
+})
 
 function addMovie() {
   $('#add').click(function(e) {

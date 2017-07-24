@@ -3,7 +3,9 @@
  */
 import $ from 'jquery';
 import getMovies from './getMovies';
+import fullpage from 'fullpage.js'
 
+var content = "";
 /**
  * require style imports
  */
@@ -29,8 +31,15 @@ getMovies().then((movies) => {
   console.log(error);
 });
 
-
-var content = 'Loading ...';
+// $(document).ready(function() {
+  $('#fullpage').fullpage();
+  $.fn.fullpage.setLockAnchors(true);
+  $.fn.fullpage({
+        afterRender: function(){
+            initialization();
+        }
+    });
+// })
 
 function loadMovies() {
   $('.box').css('background-image', 'url("film2.gif")');

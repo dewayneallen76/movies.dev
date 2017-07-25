@@ -4,7 +4,7 @@
 import $ from 'jquery';
 import getMovies from './getMovies';
 import fullpage from 'fullpage.js'
-
+// variable for content so that content can be added with jQuery
 var content = "";
 // constant for json file containing the movies.
 const apiBase = 'http://localhost:3000/movies';
@@ -15,11 +15,6 @@ const apiBase = 'http://localhost:3000/movies';
 
 // const getMovies = require('./getMovies.js');
 //
-
-// ajax request to get the movies, and console log the data
-$.ajax(apiBase)
-    .done(data => console.log(data))
-    .fail(error => console.log(error));
 
 getMovies().then((movies) => {
   console.log('Here are all the movies:');
@@ -35,7 +30,14 @@ getMovies().then((movies) => {
 fullpage.js
 */
 $('#fullpage').fullpage( {
-  normalScrollElements: '.box'
+  normalScrollElements: '.box',
+  onLeave: function(index, nextIndex, direction) {
+    var leavingSection = $(this);
+    // runs the loadMovies function when scroll down from the curtains page.
+    if(index == 1 && direction == 'down') {
+      loadMovies();
+    }
+  }
 });
 
 $(document).on('click', '#scrollUp', function(){
@@ -46,8 +48,6 @@ function loadMovies() {
   $('.box').css('background-image', 'url("film2.gif")');
   displayMovies();
 }
-
-loadMovies();
 
 function displayMovies() {
   getMovies().then((movies) => {

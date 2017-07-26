@@ -41,7 +41,10 @@ $('#fullpage').fullpage( {
 });
 
 $(document).on('click', '#scrollUp', function(){
-  $.fn.fullpage.moveSectionDown();
+  $('.curtains, .openingText').animate( {
+    top: '-1000px'
+  }, 1500)
+  loadMovies();
 });
 
 function loadMovies() {

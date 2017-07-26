@@ -2,15 +2,16 @@ html, body {
     height: 100%;
 }
 
-.main {
-  background-image: url('theater3.jpg');
+
+.curtains {
+  background-image: url('curtain.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.curtains {
-  background-image: url('curtain.jpg');
+.main {
+  background-image: url('theater3.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

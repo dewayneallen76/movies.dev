@@ -26,11 +26,13 @@
       <div class="container box col-sm-12 col-md-8 col-md-offset-2">
         <div id="movies">
           <br>
-          <div id="alertTitle" class="alert alert-danger" role="alert" hidden>Title cannot be blank!<span class="closeAlert">X</span></div>
-          <div id="alertRating" class="alert alert-danger" role="alert" hidden>Rating cannot be blank!<span class="closeAlert">X</span></div>
-          <div id="alertAdded" class="alert alert-success" role="alert" hidden>Movie added<span class="closeAlert">X</span></div>
-          <div id="alertEdit" class="alert alert-success" role="alert" hidden>Movie updated<span class="closeAlert">X</span></div>
-          <div id="alertDelete" class="alert alert-danger" role="alert" hidden>Movie deleted <span class="closeAlert">X</span></div>
+          <!-- HIDDEN ALERTS THAT SHOW ON MOVIE ACTIONS -->
+          <div id="alertTitle" class="alert alert-warning alert-dismissable" role="alert" hidden><a class="closeAlert close" data-dismiss="alert" aria-label="close">&times;</a>Title cannot be blank!</div>
+          <div id="alertRating" class="alert alert-warning alert-dismissable" role="alert" hidden><a class="closeAlert close" data-dismiss="alert" aria-label="close">&times;</a>Rating cannot be blank!</div>
+          <div id="alertAdded" class="alert alert-success alert-dismissable" role="alert" hidden><a class="closeAlert close" data-dismiss="alert" aria-label="close">&times;</a>Movie Added</div>
+          <div id="alertEdit" class="alert alert-success alert-dismissable" role="alert" hidden><a class="closeAlert close" data-dismiss="alert" aria-label="close">&times;</a>Movie Edited</div>
+          <div id="alertDelete" class="alert alert-danger alert-dismissable" role="alert" hidden><a class="closeAlert close" data-dismiss="alert" aria-label="close">&times;</a>Movie Deleted</div>
+          <!-- ADD MOVIES TOGGLE INPUT -->
           <h4 style="font-size: 20px">Add Movie  <a href="#"><span class="addMovie">+</span></a></h4>
           <div class="showMovieInput">
             <label for="title">Title</label>

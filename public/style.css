@@ -39,6 +39,16 @@ html, body {
   font-size: 100px;
 }
 
+.image {
+  background-image: url('popcorn.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+  width: 225px;
+  margin: 0 auto;
+  padding-top: 20%;
+}
+
 .heading {
   margin-bottom: 5px;
   color: white;

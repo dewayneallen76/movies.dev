@@ -144,16 +144,6 @@
       "title": "Testing adding another movie",
       "rating": "5",
       "id": 29
-    },
-    {
-      "title": "adding another movie",
-      "rating": "1",
-      "id": 30
-    },
-    {
-      "title": "happy gilmore",
-      "rating": "4",
-      "id": 33
     }
   ]
 }

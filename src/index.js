@@ -47,6 +47,10 @@ $(document).on('click', '#scrollUp', function(){
   loadMovies();
 });
 
+$('.closeAlert').click(function() {
+  $('.alert').hide();
+})
+
 function loadMovies() {
   $('.box').css('background-image', 'url("film2.gif")');
   displayMovies();
@@ -156,8 +160,8 @@ $('#insertMovies').on('click', '.delete', function() {
   var self = $(this);
   alert(deleteId + ' ' + deleteTitle + ' ' + deleteRating);
 
-  $('.box').css('background-image', 'url("film2.gif")');
   $('#movies').css('display', 'none');
+  $('.box').css('background-image', 'url("film2.gif")');
 
   getMovies().then((movies) => {
     movies.forEach((movie) => {

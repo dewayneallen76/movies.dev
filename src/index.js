@@ -127,13 +127,13 @@ $('#insertMovies').on('click', '.saveEdit', function() {
             'rating' : editRating
           },
           success: function() {
-           $('#alertEdit').show();
+          loadMovies();
+          $('#alertEdit').show();
           }
         })
       }
     });
   })
-  loadMovies();
 })
 
 // Click event for delete buttons

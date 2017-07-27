@@ -179,6 +179,11 @@
       "title": "Is it still working",
       "rating": "3",
       "id": 36
+    },
+    {
+      "title": "Adding movie after edit fixed",
+      "rating": "5",
+      "id": 37
     }
   ]
 }

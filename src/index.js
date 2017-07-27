@@ -8,7 +8,6 @@ import fullpage from 'fullpage.js'
 var content = "";
 // constant for json file containing the movies.
 const apiBase = 'http://localhost:3000/movies';
-var db = 'db.json';
 /**
  * require style imports
  */
@@ -134,10 +133,9 @@ $('#insertMovies').on('click', '.saveEdit', function() {
       }
     });
   })
-  $('#movies').css('display', 'none');
   loadMovies();
-
 })
+
 // Click event for delete buttons
 $('#insertMovies').on('click', '.delete', function() {
   alert('button clicked');

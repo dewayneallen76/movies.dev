@@ -152,13 +152,12 @@ $('#insertMovies').on('click', '.saveEdit', function() {
   })
 })
 
-// Click event for delete buttons
+// Click event for delete button
 $('#insertMovies').on('click', '.delete', function() {
   var deleteId = $(this).parent().siblings('.id').text();
   var deleteTitle = $(this).parent().siblings('.title').children().first().val();
   var deleteRating = $(this).parent().siblings('.rating').children().first().val();
   var self = $(this);
-  alert(deleteId + ' ' + deleteTitle + ' ' + deleteRating);
 
   $('#movies').css('display', 'none');
   $('.box').css('background-image', 'url("film2.gif")');

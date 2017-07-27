@@ -1,5 +1,6 @@
 html, body {
     height: 100%;
+    font-family: 'Bangers', cursive;
 }
 
 .curtains {
@@ -57,8 +58,8 @@ html, body {
 }
 
 .box {
-  height: 550px;
-  width: 825px;
+  height: 600px;
+  /*width: 100%;*/
   overflow: auto;
   background-color: silver;
   border: 10px solid black;
@@ -67,6 +68,7 @@ html, body {
 
 .showMovieInput {
   display: none;
+  font-size: 25px;
 }
 
 #movies {
@@ -98,4 +100,12 @@ html, body {
 	-webkit-animation: wiggle 0.5s infinite;
 	-moz-animation: wiggle 0.5s infinite;
 	animation: wiggle 0.5s infinite;
+}
+
+.table {
+  font-size: 30px;
+}
+
+.alert {
+  font-size: 25px;
 }

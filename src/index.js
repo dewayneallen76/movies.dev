@@ -59,9 +59,9 @@ function displayMovies() {
       content += '<td class="id" style="display:none">' + movie.id + '</td>';
       content += '<td class="title"><input class="editTitle" value="' + movie.title + '"hidden><span class="movieTitle">' + movie.title + '</span></td>';
       content += '<td class="rating"><input type="number" min="1" max="5" class="editRating" value="' + movie.rating + '"hidden><span class="movieRating">' + movie.rating + '</span></td>';
-      content += '<td><input class="btn btn-primary edit" type="button" value="Edit Movie"></td>';
-      content += '<td><input class="btn btn-success saveEdit" type="button" value="Save Edit" style="display:none"></td>';
-      content += '<td><input class="btn btn-danger delete" type="button" value="Delete Movie" ></td>';
+      content += '<td><p class="edit">Edit</p></td>';
+      content += '<td><p class="saveEdit" style="display:none">Save</p></td>';
+      content += '<td><p class="delete" style="color:red">X</p></td>';
       content += '</tr>';
     });
     $('#movies').css('display', 'block');
@@ -88,6 +88,7 @@ function addMovie() {
       $('#title').val("");
       $('#rating').val("");
       $('.alert').hide();
+      $('#alertAdded').show();
       $('#movies').css('display', 'none');
       loadMovies();
     }
@@ -115,7 +116,9 @@ $('#insertMovies').on('click', '.saveEdit', function() {
   var editId = $(this).parent().siblings('.id').text();
   var editTitle = $(this).parent().siblings('.title').children().first().val();
   var editRating = $(this).parent().siblings('.rating').children().first().val();
-
+  var self = $(this);
+  $('.box').css({backgroundImage: 'url("film2.gif")', zIndex: '2'});
+  $('#movies').css('display', 'none');
   getMovies().then((movies) => {
     movies.forEach((movie) => {
       if(movie.id == editId) {
@@ -127,12 +130,21 @@ $('#insertMovies').on('click', '.saveEdit', function() {
             'rating' : editRating
           },
           success: function() {
-          loadMovies();
+            self.parent().siblings('.title').children('.movieTitle').show();
+            self.parent().siblings('.title').children('.movieTitle').text(editTitle);
+            self.parent().siblings('.title').children().first().hide();
+            self.parent().siblings('.rating').children('.movieRating').show();
+            self.parent().siblings('.rating').children('.movieRating').text(editRating);
+            self.parent().siblings('.rating').children().first().hide();
+            self.attr('style', 'display:none');
+            self.parent().parent().find('.edit').attr('style', 'display:block');
           $('#alertEdit').show();
+          $('.box').css('background-image', 'none');
+          $('#movies').css('display', 'block');
           }
-        })
+        });
       }
-    });
+    })
   })
 })
 

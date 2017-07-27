@@ -1,12 +1,12 @@
 {
   "movies": [
     {
-      "title": "Not Casablanca",
-      "rating": "2",
+      "title": "Casablanca 8",
+      "rating": "3",
       "id": 1
     },
     {
-      "title": "Star Whores",
+      "title": "Star Wars",
       "rating": "5",
       "id": 2
     },
@@ -184,6 +184,21 @@
       "title": "Adding movie after edit fixed",
       "rating": "5",
       "id": 37
+    },
+    {
+      "title": "Captain America: civil war",
+      "rating": "5",
+      "id": 38
+    },
+    {
+      "title": "kong: skull island",
+      "rating": "3",
+      "id": 39
+    },
+    {
+      "title": "innerspace",
+      "rating": "4",
+      "id": 40
     }
   ]
 }

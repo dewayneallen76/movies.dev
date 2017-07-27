@@ -8,7 +8,7 @@ import fullpage from 'fullpage.js'
 var content = "";
 // constant for json file containing the movies.
 const apiBase = 'http://localhost:3000/movies';
-
+var db = 'db.json';
 /**
  * require style imports
  */
@@ -117,19 +117,25 @@ $('#insertMovies').on('click', '.saveEdit', function() {
   var editTitle = $(this).parent().siblings('.title').children().first().val();
   var editRating = $(this).parent().siblings('.rating').children().first().val();
 
-  alert(editId + " " + editTitle + " " + editRating);
-
   getMovies().then((movies) => {
     movies.forEach((movie) => {
-      if('{id}' === editId) {
-        $.put(apiBase, {
-          '{title}' : editTtile,
-          '{rating}' : editRating
+      if(movie.id == editId) {
+        $.ajax({
+          url: apiBase + '/' + editId,
+          type: 'PUT',
+          data: {
+            'title' : editTitle,
+            'rating' : editRating
+          },
+          success: function() {
+           $('#alertEdit').show();
+          }
         })
       }
     });
   })
-
+  $('#movies').css('display', 'none');
+  loadMovies();
 
 })
 // Click event for delete buttons

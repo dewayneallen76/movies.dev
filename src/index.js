@@ -150,5 +150,34 @@ $('#insertMovies').on('click', '.saveEdit', function() {
 
 // Click event for delete buttons
 $('#insertMovies').on('click', '.delete', function() {
-  alert('button clicked');
+  var deleteId = $(this).parent().siblings('.id').text();
+  var deleteTitle = $(this).parent().siblings('.title').children().first().val();
+  var deleteRating = $(this).parent().siblings('.rating').children().first().val();
+  var self = $(this);
+  alert(deleteId + ' ' + deleteTitle + ' ' + deleteRating);
+
+  $('.box').css('background-image', 'url("film2.gif")');
+  $('#movies').css('display', 'none');
+
+  getMovies().then((movies) => {
+    movies.forEach((movie) => {
+      if(movie.id == deleteId) {
+        $.ajax({
+          url: apiBase + '/' + deleteId,
+          type: 'DELETE',
+          data: {
+            'id': deleteId,
+            'title': deleteTitle,
+            'rating': deleteRating
+          },
+          success: function() {
+            self.parent().parent().attr('style', 'display:none');
+            $('#alertDelete').show();
+            $('.box').css('background-image', 'none');
+            $('#movies').css('display', 'block');
+          }
+        });
+      }
+    })
+  });
 })

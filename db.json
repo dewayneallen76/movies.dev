@@ -2,11 +2,11 @@
   "movies": [
     {
       "title": "Casablanca 8",
-      "rating": "3",
+      "rating": "5",
       "id": 1
     },
     {
-      "title": "Star Wars",
+      "title": "Star Wars xx",
       "rating": "5",
       "id": 2
     },
@@ -151,54 +151,9 @@
       "id": 30
     },
     {
-      "title": "another movie",
-      "rating": "1",
-      "id": 31
-    },
-    {
-      "title": "Adding another movie",
-      "rating": "5",
-      "id": 32
-    },
-    {
-      "title": "Another Movie",
-      "rating": "5",
+      "title": "happy gilmore",
+      "rating": "4",
       "id": 33
-    },
-    {
-      "title": "Curtain works with fullpage",
-      "rating": "4",
-      "id": 34
-    },
-    {
-      "title": "Making sure still working",
-      "rating": "5",
-      "id": 35
-    },
-    {
-      "title": "Is it still working",
-      "rating": "3",
-      "id": 36
-    },
-    {
-      "title": "Adding movie after edit fixed",
-      "rating": "5",
-      "id": 37
-    },
-    {
-      "title": "Captain America: civil war",
-      "rating": "5",
-      "id": 38
-    },
-    {
-      "title": "kong: skull island",
-      "rating": "3",
-      "id": 39
-    },
-    {
-      "title": "innerspace",
-      "rating": "4",
-      "id": 40
     }
   ]
 }

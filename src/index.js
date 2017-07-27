@@ -8,6 +8,7 @@ import fullpage from 'fullpage.js'
 var content = "";
 // constant for json file containing the movies.
 const apiBase = 'http://localhost:3000/movies';
+
 /**
  * require style imports
  */
@@ -119,11 +120,14 @@ $('#insertMovies').on('click', '.saveEdit', function() {
   alert(editId + " " + editTitle + " " + editRating);
 
   getMovies().then((movies) => {
-    for(var i = 0; i < movies.length; i++) {
-      if(movies[i].id == editId) {
-        console.log(movies[i].title);
+    movies.forEach((movie) => {
+      if('{id}' === editId) {
+        $.put(apiBase, {
+          '{title}' : editTtile,
+          '{rating}' : editRating
+        })
       }
-    }
+    });
   })
 
 

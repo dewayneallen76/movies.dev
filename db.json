@@ -1,12 +1,12 @@
 {
   "movies": [
     {
-      "title": "Not Casablanca",
-      "rating": "3",
+      "title": "Casablanca",
+      "rating": "2",
       "id": 1
     },
     {
-      "title": "THIS IS AN EDIT",
+      "title": "Star Whores",
       "rating": "5",
       "id": 2
     },

@@ -1,7 +1,7 @@
 {
   "movies": [
     {
-      "title": "Star Wars",
+      "title": "Star Wars ii",
       "rating": "5",
       "id": 2
     },
@@ -109,11 +109,6 @@
       "title": "The A Team",
       "rating": "5",
       "id": 23
-    },
-    {
-      "title": "Not Casablanca",
-      "rating": "4",
-      "id": 24
     }
   ]
 }

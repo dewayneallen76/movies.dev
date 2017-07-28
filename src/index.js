@@ -54,9 +54,9 @@ function displayMovies() {
       content += '<td class="id" style="display:none">' + movie.id + '</td>';
       content += '<td class="title"><input class="editTitle" value="' + movie.title + '"hidden><span class="movieTitle">' + movie.title + '</span></td>';
       content += '<td class="rating"><input type="number" min="1" max="5" class="editRating" value="' + movie.rating + '"hidden><span class="movieRating">' + movie.rating + '</span></td>';
-      content += '<td><p class="edit">Edit</p></td>';
-      content += '<td><p class="saveEdit save" style="display:none">Save</p></td>';
-      content += '<td><p class="delete" style="color:red">X</p></td>';
+      content += '<td><a class="edit">Edit</a></td>';
+      content += '<td><a class="saveEdit save" style="display:none">Save</a></td>';
+      content += '<td><a class="delete" style="color:red">X</a></td>';
       content += '</tr>';
     });
     $('#movies').css('display', 'block');

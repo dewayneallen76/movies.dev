@@ -1,12 +1,7 @@
 {
   "movies": [
     {
-      "title": "Casablanca 8",
-      "rating": "5",
-      "id": 1
-    },
-    {
-      "title": "Star Wars xx",
+      "title": "Star Wars",
       "rating": "5",
       "id": 2
     },
@@ -119,26 +114,6 @@
       "title": "Not Casablanca",
       "rating": "4",
       "id": 24
-    },
-    {
-      "title": "Not Casablanca",
-      "rating": "3",
-      "id": 25
-    },
-    {
-      "title": "Some Movie",
-      "rating": "5",
-      "id": 26
-    },
-    {
-      "title": "Another Movie",
-      "rating": "5",
-      "id": 27
-    },
-    {
-      "title": "Yet Another Movie",
-      "rating": "3",
-      "id": 28
     }
   ]
 }

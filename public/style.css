@@ -61,7 +61,7 @@ html, body {
   height: 600px;
   /*width: 100%;*/
   overflow: auto;
-  background-color: silver;
+  background-color: gray;
   border: 10px solid black;
   background-size: 100% 100%;
 }
@@ -108,4 +108,8 @@ html, body {
 
 .alert {
   font-size: 25px;
+}
+
+.save {
+  color: green;
 }

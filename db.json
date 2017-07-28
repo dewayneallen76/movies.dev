@@ -46,7 +46,7 @@
       "id": 9
     },
     {
-      "title": "Spider Man",
+      "title": "Spider Man 9",
       "rating": "4",
       "id": 10
     },
@@ -137,13 +137,8 @@
     },
     {
       "title": "Yet Another Movie",
-      "rating": "1",
+      "rating": "3",
       "id": 28
-    },
-    {
-      "title": "Testing adding another movie",
-      "rating": "5",
-      "id": 29
     }
   ]
 }

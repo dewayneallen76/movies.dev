@@ -15,7 +15,7 @@ const apiBase = 'http://localhost:3000/movies';
 
 // const getMovies = require('./getMovies.js');
 //
-
+/* Console log showing the movies from json-server */
 getMovies().then((movies) => {
   console.log('Here are all the movies:');
   movies.forEach(({title, rating, id}) => {
@@ -27,7 +27,7 @@ getMovies().then((movies) => {
 });
 
 /*
-fullpage.js
+fullpage.js, decided to got with a click event rather than scrolling for the effect that I was looking for. However removing this messes up the display of the movies page so I am leaving it.
 */
 $('#fullpage').fullpage( {
   normalScrollElements: '.box',
@@ -40,22 +40,13 @@ $('#fullpage').fullpage( {
   }
 });
 
-$(document).on('click', '#scrollUp', function(){
-  $('.curtains, .openingText').animate( {
-    top: '-1000px'
-  }, 1500)
-  loadMovies();
-});
-
-$('.closeAlert').click(function() {
-  $('.alert').hide();
-})
-
+// Function that shows the loading animation, and then runs the display movies function
 function loadMovies() {
   $('.box').css('background-image', 'url("film2.gif")');
   displayMovies();
 }
 
+// Function that displays the movies in a table inside the box div
 function displayMovies() {
   getMovies().then((movies) => {
     movies.forEach((movie) => {
@@ -74,10 +65,25 @@ function displayMovies() {
   })
 }
 
+// Click event for popcorn icon that starts the "curtain up" effect and runs the LoadMovies function so that the movies will be displayed.
+$(document).on('click', '#scrollUp', function(){
+  $('.curtains, .openingText').animate( {
+    top: '-1000px'
+  }, 1500)
+  loadMovies();
+});
+
+// Click event for the alerts so that they can be closed after shown
+$('.closeAlert').click(function() {
+  $('.alert').hide();
+})
+
+// Click event to show the input to add movie and rating
 $('.addMovie').click(function() {
   $('.showMovieInput').slideToggle();
 })
 
+// Function to add a new movie to the db.json file
 function addMovie() {
   $('#add').click(function(e) {
     if($('#title').val() === "") {
@@ -100,7 +106,7 @@ function addMovie() {
 }
 addMovie();
 
-// Click event for edit buttons
+// Click event for edit
 $('#insertMovies').on('click', '.edit', function() {
 
 
@@ -115,7 +121,7 @@ $('#insertMovies').on('click', '.edit', function() {
 
 })
 
-
+// Click event for save to save the edits
 $('#insertMovies').on('click', '.saveEdit', function() {
   var editId = $(this).parent().siblings('.id').text();
   var editTitle = $(this).parent().siblings('.title').children().first().val();

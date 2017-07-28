@@ -1,29 +1,19 @@
 {
   "movies": [
     {
-      "title": "Star Wars ii",
+      "title": "Star Wars: a new hope",
       "rating": "5",
       "id": 2
     },
     {
-      "title": "The Small Town",
+      "title": "The Town",
       "rating": "5",
       "id": 3
     },
     {
-      "title": "The Recently Dearly Departed",
-      "rating": "3",
-      "id": 4
-    },
-    {
-      "title": "Star Trek with Edits",
-      "rating": "3",
-      "id": 5
-    },
-    {
-      "title": "Edited Westworld",
+      "title": "The Departed",
       "rating": "5",
-      "id": 6
+      "id": 4
     },
     {
       "title": "Happy Gilmore",
@@ -41,7 +31,7 @@
       "id": 9
     },
     {
-      "title": "Spider Man 9",
+      "title": "spider man",
       "rating": "4",
       "id": 10
     },
@@ -101,13 +91,8 @@
       "id": 21
     },
     {
-      "title": "The Santa Clause",
-      "rating": "2",
-      "id": 22
-    },
-    {
       "title": "The A Team",
-      "rating": "5",
+      "rating": "3",
       "id": 23
     }
   ]

@@ -100,7 +100,8 @@ function addMovie() {
       $('.alert').hide();
       $('#alertAdded').show();
       $('#movies').css('display', 'none');
-      loadMovies();
+      $('.box').css('background-image', 'url(btf.gif)');
+      displayMovies();
     }
     });
 }

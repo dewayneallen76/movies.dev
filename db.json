@@ -1,7 +1,7 @@
 {
   "movies": [
     {
-      "title": "Star Wars: a new hope",
+      "title": "Star Wars",
       "rating": "5",
       "id": 2
     },
@@ -81,18 +81,23 @@
       "id": 19
     },
     {
-      "title": "The Dirty Dozen",
-      "rating": "4",
+      "title": "Lord of the rings",
+      "rating": "5",
       "id": 20
     },
     {
-      "title": "Wild Hogs",
-      "rating": "3",
+      "title": "back to the future",
+      "rating": "5",
       "id": 21
     },
     {
-      "title": "The A Team",
-      "rating": "3",
+      "title": "the hobbit ",
+      "rating": "4",
+      "id": 22
+    },
+    {
+      "title": "the ring",
+      "rating": "2",
       "id": 23
     }
   ]

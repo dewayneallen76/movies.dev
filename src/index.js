@@ -97,8 +97,10 @@ function addMovie() {
       }),
       $('#title').val("");
       $('#rating').val("");
-      $('.alert').hide();
       $('#alertAdded').show();
+      setTimeout(function() {
+        $('.alert').hide();
+      }, 3000);
       $('#movies').css('display', 'none');
       $('.box').css('background-image', 'url(btf.gif)');
       displayMovies();
@@ -150,6 +152,9 @@ $('#insertMovies').on('click', '.saveEdit', function() {
             self.attr('style', 'display:none');
             self.parent().parent().find('.edit').attr('style', 'display:block');
           $('#alertEdit').show();
+          setTimeout(function() {
+            $('.alert').hide();
+          }, 3000);
           $('.box').css('background-image', 'none');
           $('#movies').css('display', 'block');
           }
@@ -183,6 +188,9 @@ $('#insertMovies').on('click', '.delete', function() {
           success: function() {
             self.parent().parent().attr('style', 'display:none');
             $('#alertDelete').show();
+            setTimeout(function() {
+              $('.alert').hide();
+            }, 3000);
             $('.box').css('background-image', 'none');
             $('#movies').css('display', 'block');
           }

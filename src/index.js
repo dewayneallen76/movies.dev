@@ -3,7 +3,7 @@
  */
 import $ from 'jquery';
 import getMovies from './getMovies';
-import fullpage from 'fullpage.js'
+import fullpage from 'fullpage.js';
 // variable for content so that content can be added with jQuery
 var content = "";
 // constant for json file containing the movies.

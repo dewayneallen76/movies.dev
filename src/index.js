@@ -55,7 +55,7 @@ function displayMovies() {
       content += '<td class="title"><input class="editTitle" value="' + movie.title + '"hidden><span class="movieTitle">' + movie.title + '</span></td>';
       content += '<td class="rating"><input type="number" min="1" max="5" class="editRating" value="' + movie.rating + '"hidden><span class="movieRating">' + movie.rating + '</span></td>';
       content += '<td><p class="edit">Edit</p></td>';
-      content += '<td><p class="saveEdit" style="display:none">Save</p></td>';
+      content += '<td><p class="saveEdit save" style="display:none">Save</p></td>';
       content += '<td><p class="delete" style="color:red">X</p></td>';
       content += '</tr>';
     });
@@ -127,7 +127,7 @@ $('#insertMovies').on('click', '.saveEdit', function() {
   var editTitle = $(this).parent().siblings('.title').children().first().val();
   var editRating = $(this).parent().siblings('.rating').children().first().val();
   var self = $(this);
-  $('.box').css({backgroundImage: 'url("film2.gif")', zIndex: '2'});
+  $('.box').css({backgroundImage: 'url("indy.gif")', zIndex: '2'});
   $('#movies').css('display', 'none');
   getMovies().then((movies) => {
     movies.forEach((movie) => {
@@ -166,7 +166,7 @@ $('#insertMovies').on('click', '.delete', function() {
   var self = $(this);
 
   $('#movies').css('display', 'none');
-  $('.box').css('background-image', 'url("film2.gif")');
+  $('.box').css('background-image', 'url("diehard.gif")');
 
   getMovies().then((movies) => {
     movies.forEach((movie) => {

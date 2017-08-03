@@ -71,13 +71,3 @@ Delete movies
 
 - Each movie should have a "delete" button
 - When this button is clicked, your javascript should send a DELETE request
-
-### Bonuses
-
-- Add a `disabled` to buttons when their corresponding ajax request is still
-  pending.
-- Show a loading animation instead of just text that says "loading..."
-- Modals for creating and editing movie forms
-- Sort by rating, title, genre
-- Pagination
-- Movies should have genres

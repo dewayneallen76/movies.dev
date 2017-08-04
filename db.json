@@ -1,12 +1,12 @@
 {
   "movies": [
     {
-      "title": "Star Wars",
+      "title": "Star Wars: return of the jedi",
       "rating": "5",
       "id": 2
     },
     {
-      "title": "The new Town",
+      "title": "The Town",
       "rating": "5",
       "id": 3
     },
